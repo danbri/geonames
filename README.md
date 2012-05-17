@@ -44,7 +44,7 @@ So before running the scripts you'll need to execute:
 
 To download and convert the files into ntriples simply run:
 
-  rake download convert
+  rake download unpack convert
 
 The converted data is stored in geonames.nt.
 

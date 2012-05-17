@@ -3,11 +3,15 @@ require 'rake/clean'
 
 CLEAN.include ["*.nt"]
 
-#Download and unpack the data dump
+#Download the data dump
 task :download do
   sh %{wget -O all-geonames-rdf.zip http://download.geonames.org/all-geonames-rdf.zip}
+end
+
+# Unpack the data dump
+task :unpack do
   puts "Unpacking"
-  sh %{gunzip all-geonames-rdf.zip}
+  sh %{unzip all-geonames-rdf.zip}
 end
 
 #Convert the dump format into ntriples
